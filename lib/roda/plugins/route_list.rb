@@ -76,7 +76,7 @@ class Roda
           if args
             if args.is_a?(Hash)
               range = 1..-1
-              path = path.gsub(/:[^\/]+/) do |match|
+              path = path.gsub(/{[^\/]+}/) do |match|
                 key = match[range].to_sym
                 value = args[key]
                 if value.nil?
@@ -91,7 +91,7 @@ class Roda
               end
             else
               values = args.dup
-              path = path.gsub(/:[^\/]+/) do |match|
+              path = path.gsub(/{[^\/]+}/) do |match|
                 if values.empty?
                   raise RodaError, "not enough placeholder values provided for named route #{name}: #{match}"
                 end
