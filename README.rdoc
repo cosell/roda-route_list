@@ -11,7 +11,7 @@ issue of routing trees being unable to introspect the routes.
 
 == Source Code
 
-Source code is available on GitHub at https://github.com/jeremyevans/roda-route_list
+Source code is available on GitHub at https://github.com/jeremyevans/roda-route_list 
 
 == Basic Usage
 
@@ -22,10 +22,10 @@ app, in one of the following formats:
 
   # route: /path/to/foo
   # route: GET /path/to/foo
-  # route: GET|POST /path/to/foo/:foo_id
-  # route[route_name]: /path/to/foo
-  # route[route_name]: GET /path/to/foo
-  # route[foo]: GET|POST /path/to/foo/:foo_id
+  # route: GET|POST /path/to/foo/{foo_id}
+  # route[route.name]: /path/to/foo
+  # route[route.name]: GET /path/to/foo
+  # route[foo]: GET|POST /path/to/foo/{foo_id}
 
 As you can see, the general style is a comment followed by
 the word route.  If you want to name the route, you can

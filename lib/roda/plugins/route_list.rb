@@ -75,7 +75,7 @@ class Roda
 
           if args
             if args.is_a?(Hash)
-              range = 1..-1
+              range = 1..-2
               path = path.gsub(/{[^\/]+}/) do |match|
                 key = match[range].to_sym
                 value = args[key]
